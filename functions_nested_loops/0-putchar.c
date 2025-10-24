@@ -9,7 +9,7 @@ int main(void)
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
-	_putchar('t');
+	_putchar('t'1);
 	_putchar('c');
 	_putchar('h');
 	_putchar('a');
@@ -17,4 +17,3 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
-
