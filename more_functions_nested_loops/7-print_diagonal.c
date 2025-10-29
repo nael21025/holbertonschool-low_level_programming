@@ -1,7 +1,7 @@
-o#include "main.h"
+#include "main.h"
 
 /**
- * print_diagonal - D
+ * print_diagonal - Draws a diagonal line of n '\' characters, followed by a new line.
  * @n: Number of '\' to print.
  */
 void print_diagonal(int n)
