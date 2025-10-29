@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - Draws a straight line of n '_' characters, followed by a new line.
+ * print_line - D
  * @n: Number of '_' to print.
  */
 void print_line(int n)
