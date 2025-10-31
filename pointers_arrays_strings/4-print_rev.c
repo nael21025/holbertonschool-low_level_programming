@@ -9,6 +9,7 @@ void print_rev(char *s)
 {
 	int len = 0;
 	char *start = s;
+
 	while (*s != '\0')
 	{
 		len++;
