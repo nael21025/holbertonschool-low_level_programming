@@ -6,11 +6,12 @@
  * @argv: argument vector
  * Return: 0
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int ac, char **av)
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	int i;²
+	(void)ac;
+	
+	for (i = 0; i < ac; i++)
+		printf("%s\n", av[i]);
 	return (0);
 }
