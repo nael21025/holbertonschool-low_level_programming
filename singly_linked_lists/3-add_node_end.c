@@ -3,20 +3,16 @@
 #include <string.h>
 
 /**
- * add_node_end - adds a new node at the end of a list_t list
- * @head: address of a pointer to the first node of the list
- * @str: string to duplicate and store in the new node
+ * create_node - creates a new list_t node
+ * @str: string to duplicate and store in the node
  *
- * Return: address of the new element, or NULL if it failed
+ * Return: pointer to the new node, or NULL on failure
  */
-list_t *add_node_end(list_t **head, const char *str)
+static list_t *create_node(const char *str)
 {
-	list_t *new_node, *tmp;
+	list_t *new_node;
 	char *dup;
 	unsigned int len = 0;
-
-	if (head == NULL)
-		return (NULL);
 
 	if (str != NULL)
 	{
@@ -43,6 +39,27 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->str = dup;
 	new_node->len = len;
 	new_node->next = NULL;
+
+	return (new_node);
+}
+
+/**
+ * add_node_end - adds a new node at the end of a list_t list
+ * @head: address of a pointer to the first node of the list
+ * @str: string to duplicate and store in the new node
+ *
+ * Return: address of the new element, or NULL if it failed
+ */
+list_t *add_node_end(list_t **head, const char *str)
+{
+	list_t *new_node, *tmp;
+
+	if (head == NULL)
+		return (NULL);
+
+	new_node = create_node(str);
+	if (new_node == NULL)
+		return (NULL);
 
 	if (*head == NULL)
 	{
